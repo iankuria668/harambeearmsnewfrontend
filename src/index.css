@@ -1,13 +1,320 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bg: #282c34;
+  --header: #fff;
+  --link: #61dafb;
+  --text: hsla(0, 0%, 100%, 0.88);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.NavLink {
+  padding-left: 30px;
+  align-items: center;
+  padding-right: 30px;
+}
+
+#header {
+  background-color: rgba(255, 0, 0, 0.704);
+  padding-left: 30px;
+  align-items: center;
+}
+
+#navbar {
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+
+#navbar .NavLink {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#navbar .NavLink:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar .NavLink.active {
+  background-color: whitesmoke;
+  color: black;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.safety-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.safety-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.safety-list li img {
+  width: 40px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+
+
+
+
+.Card {
+  padding-bottom: 10px;
+}
+
+.accountPieces {
+  float: left;
+  padding-left: 30px;
+  padding-bottom: 50 px;
+  padding-top: 30px;
+  padding-right: 150px;
+}
+
+.intro {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+#featureTitle {
+  text-align: center;
+  padding-left: 30px;
+  font-size: 200%;
+}
+
+#featList {
+  padding-top: 75px;
+}
+
+.featuredlist {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  justify-content: center;
+  margin: auto;
+  padding-top: 30px
+}
+
+/* .filters{
+  padding-top: 25px;
+  border-radius: 0.25px;
+  color: #000;
+  cursor: pointer
+} */
+
+
+/* .searchbar{
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+} */
+
+/* .searchbar input {
+  width: 70%;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 2px 15px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #555555;
+  padding-left: 100px;
+} */
+
+.filters {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filters strong {
+  margin-bottom: 10px;
+}
+
+.filters select {
+  border: 3px solid grey;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.filters select:focus {
+  color: grey;
+}
+
+.searchbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar strong {
+  margin-right: 10px;
+}
+
+.prompt {
+  width: 30%;  
+  border: 3px solid gray;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.prompt:focus {
+  color: gray;
+}
+
+.intro {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#inventory {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wrap {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.mycart {
+  float: left;
+  padding-left: 30px;
+  padding-top:30px;
+  font-size: 200%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#inventory {
+  float: left;
+  padding-left: 10px;
+  font-size: 200%;
+}
+
+.checkout {
+  float: right;
+  padding-bottom: 50px;
+  padding-right: 50px;
+}
+
+/* .cartback {
+  background-color: b;
+} */
+
+.total {
+  font-size: 200%;
+  color: goldenrod;
+}
+
+#wallet {
+  color: gold;
+  font-size: 125%;
+  background-color: black;
+}
+
+#featureTitle {
+  text-align: center;
+}
+
+.accountContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Add space between the divs */
+  padding: 20px; /* Optional: add padding to the container */
+}
+
+.accountPieces {
+  flex: 1 1 calc(25% - 40px); /* Adjust width and include space for margins */
+  box-sizing: border-box;
+  padding: 20px; /* Add padding inside each div */
+  margin: 10px; /* Add margin between divs */
+  border: 1px solid #ccc; /* Add border to each div */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for floating effect */
+  background-color: #f9f9f9; /* Optional: add background color */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add space between form elements */
+}
+
+input, select, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007BFF; /* Button color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker button color on hover */
 }
